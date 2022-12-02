@@ -46,50 +46,7 @@ if ($conn->connect_error) {
   <!-- ************************************* -->
   <!-- --------------NavBar----------------- -->
   <!-- ************************************* -->
-  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #3D1673; padding: 25px;">
-
-    <div class="container">
-      <a class="navbar-brand" href="index.html"
-        style="font-family: Poppins, Arial; color: white; font-weight: 400;">Jagoron</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon" style="color: white"></span>
-        </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#"></a>
-        </li>
-      </ul>
-
-      <form class="d-flex">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" href="#courses" style="color: white">Courses</a>
-          </li>
-          <li class="nav-item">
-
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="policebd.html" style="color: white">Police Numbers</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" style="color: white" href="#Tutorials">Self Defense&nbsp; <i
-                class="fa fa-youtube-play"></i></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="index.html" style="color: white">Free PDF Books</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" style="color: white" href="login.php">Signout</a>
-          </li>
-        </ul>
-        
-      </form>
-      </div>
-    </div>
-  </nav>
+  <?php require 'partials/loggednav.php'?>
 
   <!-- ************************************* -->
   <!-- --------------NavBar----------------- -->
@@ -114,14 +71,26 @@ if ($conn->connect_error) {
                             </div>
                             <div class="col-md-8">
                               <div class="card-body">
-                                <h5 class="card-title">Product 1 </h5>
+                                <h5 class="card-title" id="proname">Pen Knife</h5>
                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <a button type="button" class="btn btn-success btn-sm" href="#">Download</a>
+                                <p >Price: <span id="proprice">250</span> (in taka)</p>
+                                
+                                <button class="btn btn-primary btn-sm"onclick="setOrder()">Select</button>
                               </div>
                             </div>
                           </div>
                         </div>
                   </div>
+
+                  <script>
+                    function setOrder(){
+                      var proname = document.getElementById("proname").innerHTML;
+                      document.getElementById("productName").value = proname;
+
+                      var proprice = document.getElementById("proprice").innerHTML;
+                      document.getElementById("unitPrice").value = proprice;
+                    }
+                  </script>
                   <div class="col-md-6 col-lg-6 col-12">
                       <div class="card mb-3" >
                           <div class="row g-0">
@@ -130,9 +99,10 @@ if ($conn->connect_error) {
                             </div>
                             <div class="col-md-8">
                               <div class="card-body">
-                                <h5 class="card-title">Product 2 </h5>
+                                <h5 class="card-title">Pepper spray</h5>
                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <a button type="button" class="btn btn-success btn-sm" href="#">Download</a>
+                                <p >Price: <span id="proprice">250</span> (in taka)</p>
+                                <button class="btn btn-primary btn-sm"onclick="setOrder()">Select</button>
                               </div>
                             </div>
                           </div>
@@ -151,9 +121,10 @@ if ($conn->connect_error) {
                             </div>
                             <div class="col-md-8">
                               <div class="card-body">
-                                <h5 class="card-title">Product 1 </h5>
+                                <h5 class="card-title">Stick</h5>
                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <a button type="button" class="btn btn-success btn-sm" href="#">Download</a>
+                                <p >Price: <span id="proprice">250</span> (in taka)</p>
+                                <button class="btn btn-primary btn-sm"onclick="setOrder()">Select</button>
                               </div>
                             </div>
                           </div>
@@ -168,9 +139,10 @@ if ($conn->connect_error) {
                             </div>
                             <div class="col-md-8">
                               <div class="card-body">
-                                <h5 class="card-title">Product 1 </h5>
+                                <h5 class="card-title">Lip Gun</h5>
                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <a button type="button" class="btn btn-success btn-sm" href="#">Download</a>
+                                <p >Price: <span id="proprice">250</span> (in taka)</p>
+                                <button class="btn btn-primary btn-sm"onclick="setOrder()">Select</button>
                               </div>
                             </div>
                           </div>
@@ -187,9 +159,10 @@ if ($conn->connect_error) {
                               </div>
                               <div class="col-md-8">
                                 <div class="card-body">
-                                  <h5 class="card-title">Product 1 </h5>
+                                  <h5 class="card-title">Bat</h5>
                                   <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                  <a button type="button" class="btn btn-success btn-sm" href="#">Download</a>
+                                  <p >Price: <span id="proprice">250</span> (in taka)</p>
+                                  <button class="btn btn-primary btn-sm"onclick="setOrder()">Select</button>
                                 </div>
                               </div>
                             </div>
@@ -204,9 +177,10 @@ if ($conn->connect_error) {
                               </div>
                               <div class="col-md-8">
                                 <div class="card-body">
-                                  <h5 class="card-title">Product 1 </h5>
+                                  <h5 class="card-title">Scale</h5>
                                   <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                  <a button type="button" class="btn btn-success btn-sm" href="#">Download</a>
+                                  <p >Price: <span id="proprice">250</span> (in taka)</p>
+                                  <button class="btn btn-primary btn-sm"onclick="setOrder()">Select</button>
                                 </div>
                               </div>
                             </div>
@@ -219,26 +193,31 @@ if ($conn->connect_error) {
             <div class="col-lg-3 col-md-3 col-12">
 
               <h1>Select A Product to Order</h1>
-                <form>
+                <form action="products.php" method="POST">
 
                   <div class="mb-3">
                       <label for="exampleFormControlInput1" class="form-label">Product Name</label>
-                      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                      <input type="text" class="form-control" id="productName" name='productName' placeholder="">
                   </div>
 
                    <div class="mb-3">
                       <label for="exampleFormControlInput1" class="form-label">Product Unit Price</label>
-                      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+                      <input type="text" class="form-control" id="unitPrice" name="unitPrice" placeholder="">
+                  </div>
+
+                  <div class="mb-3">
+                      <label for="exampleFormControlInput1" class="form-label">Product Quantity</label>
+                      <input type="text" class="form-control" id="quantity" name="quantity" placeholder="">
                   </div>
 
                   <div class="mb-3">
                       <label for="exampleFormControlInput1" class="form-label">Your Address</label>
-                      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+                      <input type="text" class="form-control" id="address" name="address" placeholder="">
                   </div>
 
                   <div class="mb-3">
                       <label for="exampleFormControlInput1" class="form-label">Your Phone Number</label>
-                      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+                      <input type="text" class="form-control" id="phone" name="phone" placeholder="">
                   </div>
 
                   <button type="submit" class="btn btn-success btn-lg d-block w-100" style="margin-top: 15px;">Order Now</button>

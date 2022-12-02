@@ -203,7 +203,7 @@
   <!-- ************************************* -->
   <!-- --------Self-Defense Product Row-------->
   <!-- ************************************* -->
-    <div id="self-defenseProduct">
+    <div id="products">
       <div class="text-center">
         <h1 class="display-4" style="font-family: 'Poppins', 'Arial'; font-weight: 800; margin-top: 90px;">Carry for Self-Defence</h1>
       </div>
@@ -216,7 +216,7 @@
           <p>penknives were used for thinning and pointing quills to prepare them for use as dip pens and, later, for
             repairing or re-pointing the nib. Prior to the invention of the pencil sharpener.</p>
           <p><a button type="button" class="btn btn-success btn-sm"
-              href="https://www.daraz.com.bd/products/arts-detail-pen-knife-5-interchangeable-blades-for-art-craft-work-silver-knife-set-5-balde-small-i118326319-s1037630406.html?spm=a2a0e.searchlist.list.1.5c5479f6RSWQq5&search=1">Buy
+              href="products.php">Buy
               Now</a></p>
         </div>
 
@@ -226,7 +226,7 @@
           <p>Pepper spray is a chemical compound that irritates the eyes, causing a burning sensation, pain, and
             temporary blindness by dilating the eyes' capillaries and inflaming membranes.</p>
           <p><a button type="button" class="btn btn-success btn-sm"
-              href="https://www.daraz.com.bd/products/self-defense-pepper-spray-i100231631-s1014098938.html?spm=a2a0e.searchlist.list.5.785467ednSAmHO&search=1">Buy
+              href="products.php">Buy
               Now</a></p>
         </div>
 
@@ -236,7 +236,7 @@
           <p>Purple Lipstick Taser Stun Gun with flashlight is portable and discreet. It packs 3 million volts of charge
             and is powered by a built-in rechargeable battery. </p>
           <p><a button type="button" class="btn btn-success btn-sm"
-              href="https://www.amazon.com/Unknown-Gold-Lipstick-Stun-Gun/dp/B073YMRSLH">Buy Now</a></p>
+              href="products.php">Buy Now</a></p>
         </div>
       </div>
 
@@ -472,6 +472,58 @@
   <!-- ----------Map Ends------------------->
   <!-- ************************************* -->
 
+  <!-- ************************************* -->
+  <!-- ----------Suicide Charts Starts--------->
+  <!-- ************************************* -->
+
+      <div class="row" style="margin-top: 50px;">
+        <div class="col-lg-6 col-md-6 col-12">
+            <!-- <h1>Suicide Rate in Bangladesh</h1> -->
+            <div id='suicideChartDiv'><!-- Plotly chart will be drawn inside this DIV --></div>
+
+            <script>
+              var data = [
+                  {
+                    x: [2012, 2013, 2014, 2015, 2016, 2017],
+                    y: [9642, 10129, 10400, 10500, 10600, 11095],
+                    type: 'bar'
+                  }
+                ];
+                var layout = {
+                  title: 'Suicide Rate in Bangladesh',
+                };
+
+                Plotly.newPlot('suicideChartDiv', data,layout);
+            </script>
+
+        </div>
+
+        <div class="col-lg-6 col-md-6 col-12">
+          <div id='depressionChartDiv'><!-- Plotly chart will be drawn inside this DIV --></div>
+
+          <script>
+            var data = [{
+              values: [4.9, 7.4, 6.7, 12.7],
+              labels: ['Suicidal Ideation', 'Suicidal plan', 'Suicidal Attempt', 'Any Suicidal Behavior'],
+              type: 'pie'
+            }];
+
+            var layout = {
+              title: 'Suicidal behavior of Adolescents for Depression',
+              // height: 400,
+              // width: 500
+            };
+
+            Plotly.newPlot('depressionChartDiv', data, layout);
+          </script>
+          </div>
+      </div>
+
+  <!-- ************************************* -->
+  <!-- ----------Suicide Charts Ends----------->
+  <!-- ************************************* -->
+
+
 
   <!-- ************************************* -->
   <!-- ----------Courses Row------------------->
@@ -693,7 +745,7 @@
 
         <h2 style="font-family: Poppins, Arial; font-size: 32px;">Don't Worry! We have Professional Lawyer.</h2>
 
-        <a button type="button" class="btn btn-success btn-lg" href="MentalStressSupportForm.php">Let us Know</a>
+        <a button type="button" class="btn btn-success btn-lg" href="lawSupportForm.php">Let us Know</a>
 
       </div>
       <div class="col-md-5 col-lg-5 col-12">
@@ -702,6 +754,8 @@
     </div>
   </div>
 </div>
+
+
 <!-- ************************************* -->
 <!-- ----------Lawyer Support---------------->
 <!-- ************************************* -->
@@ -718,6 +772,97 @@
 
       <div class="row">
         <div class="col-md-12">
+
+
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                TRUST YOUR INSTINCTS
+              </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">Too many women enroll in a self-defense class after they've been assaulted. When they recount the
+                  incident, they often say the same thing: "I had this bad feeling, but I told myself not to be
+                  paranoid," or "I knew I shouldn't have gone, but I didn't want to hurt his feelings."</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                PRACTICE TARGET DENIAL
+              </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">Don't make yourself an accessible target. The outcome of a battle is often determined before the first
+                  blow is struck. When you have the opportunity to escape from a situation before it turns bad, take it.
+                  If an approaching person gives you the creeps, walk to the other side of the street. If an elevator
+                  door opens and the guy standing inside makes the hair on the back of your neck stand up, wait for the
+                  next elevator. Those actions aren't cowardly; rather, they're a smart way to eliminate danger.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                PRESENT YOURSELF WITH CONFIDENCE
+              </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">Be aware of the message your body sends to those around you. Like animals, human predators target
+                  those they consider the weakest or most vulnerable. Attackers search for women who appear frightened,
+                  confused or distracted. They look for women who walk with their head down and their hands stuffed in
+                  their pockets, or perhaps one who's overburdened with packages or distracted by children.
+                  Remember that attackers do not want to bait a fight; they want an easy mark. By walking with
+                  confidence and awareness — looking around and keeping your head up and shoulders back — you'll
+                  dramatically reduce the likelihood of becoming a target in the first place.</div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse4" aria-expanded="false" aria-controls="flush-collapse4">
+                SET STRONG VERBAL BOUNDARIES
+              </button>
+            </h2>
+            <div id="flush-collapse4" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">Good verbal skills are an effective self-defense tool, one you're likely to use more frequently and
+                  successfully than any physical technique. When a predator engages you in conversation, he's actually
+                  "interviewing" you to see if you'll make a good victim. An experienced attacker is practiced at using
+                  his words to freeze you with fear, thus reducing the chance that you'll try to defend yourself.
+
+                  Although an aggressive verbal confrontation can be terrifying, you have to be strong enough to show
+                  the attacker he's picked the wrong victim. If you stand tall, remain calm and respond confidently and
+                  assertively, you'll probably "fail" his interview. The power of your voice alone can cause him to seek
+                  an easier target.</div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse5" aria-expanded="false" aria-controls="flush-collapse5">
+                MAINTAIN A NON-CONFRONTATIONAL STANCE
+              </button>
+            </h2>
+            <div id="flush-collapse5" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">In a self-defense situation, one of your secret weapons is the element of surprise. Most predators
+                  feel confident that you won't defend yourself, and you should capitalize on that misconception. If you
+                  assume a martial arts stance, it immediately tells the attacker that you know how to fight. In
+                  response, he's likely to be more aggressive.
+
+                  Instead, use a confident, relaxed stance in which your hips and shoulders are forward, your arms are
+                  bent, and your hands are up and open. This conciliatory posture may mislead the attacker into thinking
+                  you're willing to comply. If it becomes necessary for you to strike, he probably won't be prepared for
+                  it.</div>
+            </div>
+          </div>
+
+
+
+        </div>
+
+
+
+        <!-----------
           <div class="accordion" id="accordionExample">
             <div class="card">
               <div class="card-header" id="headingOne">
@@ -951,7 +1096,7 @@
                   must continue your barrage until it's safe to stop striking and escape.
                 </div>
               </div>
-            </div>
+            </div>----->
 
 
           </div>
@@ -1001,7 +1146,7 @@
 <!-- ************************************* -->
 <footer class="py-5" style="background-color: #3D1673;">
   <div class="container">
-    <p class="m-0 text-center text-white">Copyright &copy; jagoronbd - Md Masum Musfique</p>
+    <p class="m-0 text-center text-white">Copyright &copy; jagoronbd - MM2022</p>
   </div>
 </footer>
 <!-- ************************************* -->

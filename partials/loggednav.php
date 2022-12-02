@@ -36,11 +36,9 @@
           <a class="nav-link" href="index.php#freepdfs" style="color: white">Free PDF Books</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" style="color: white" href="login.php">Login</a>
+          <a class="nav-link" style="color: white" href="login.php">Logout</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" style="color: white" href="signup.php">Signup</a>
-        </li>
+
       </ul>
       
     </form>

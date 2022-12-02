@@ -29,6 +29,8 @@
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
     <style>
         body {
             background-color: #ffffff;
@@ -42,50 +44,7 @@
   <!-- ************************************* -->
   <!-- --------------NavBar----------------- -->
   <!-- ************************************* -->
-  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #3D1673; padding: 25px;">
-
-    <div class="container">
-      <a class="navbar-brand" href="index.html"
-        style="font-family: Poppins, Arial; color: white; font-weight: 400;">Jagoron</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon" style="color: white"></span>
-        </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#"></a>
-        </li>
-      </ul>
-
-      <form class="d-flex">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" href="#courses" style="color: white">Courses</a>
-          </li>
-          <li class="nav-item">
-
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="policebd.html" style="color: white">Police Numbers</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" style="color: white" href="#Tutorials">Self Defense&nbsp; <i
-                class="fa fa-youtube-play"></i></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="index.html" style="color: white">Free PDF Books</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" style="color: white" href="index.html">Signout</a>
-          </li>
-        </ul>
-        
-      </form>
-      </div>
-    </div>
-  </nav>
+  <?php require 'partials/loggednav.php'?>
 
   <!-- ************************************* -->
   <!-- --------------NavBar----------------- -->
@@ -104,6 +63,51 @@
           </div>
           <div class="col-md-5 col-lg-5"></div>
       </div>
+
+        <!-- Row Starts -->
+        <div class="row" style="margin-top: 30px">
+            <div class="col-lg-6 col-md-6 col-12">
+                <div id='Productsales'></div>
+
+                <script>
+                  var trace1 = {
+                      x: ['September', 'October', 'November', 'December'],
+                      y: [35, 15, 20, 33],
+                      type: 'scatter'
+                    };
+
+                    var data = [trace1];
+                    var layout = {
+                      title: 'Products Sales',
+                    };
+
+                    Plotly.newPlot('Productsales', data, layout);
+                </script>
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-12">
+                  <div id='CourseEnrollment'></div>
+
+                  <script>
+                    var data = [
+                        {
+                          x: ['September', 'October', 'November' , 'December'],
+                          y: [30, 15, 10, 45],
+                          marker:{
+                            color: ['rgba(204,204,204,1)', 'rgba(204,204,204,1)', 'rgba(204,204,204,1)', 'rgba(204,204,204,1)']
+                          },
+                          type: 'bar'
+                        }
+                      ];
+
+                      var layout = {
+                          title: 'Course Enrollment',
+                      };
+
+                      Plotly.newPlot('CourseEnrollment', data, layout);
+                  </script>
+              </div>
+        </div>
 
         <!-- Row Starts -->
         <div class="row" style="margin-top: 30px">
