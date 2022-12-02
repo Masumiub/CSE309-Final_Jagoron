@@ -1,9 +1,9 @@
 # CSE309-Final_Jagoron
 Raise Your Voice Against All Violence and Get Mental Support
 
-Md Masum Musfique
+# Md Masum Musfique
 - Id: 1920582
-Umme Tasnim
+# Umme Tasnim
 - Id: 1921848
 
 # Languages Used:
