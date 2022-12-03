@@ -259,7 +259,48 @@
       <div class="row" style="margin-top: 30px;">
 
         <div class="col-lg-12 col-md-12 col-12" style="line-height: 30px">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">No</th>
+                <th scope="col">Thana</th>
+                <th scope="col">Phone</th>
+              </tr>
+            </thead>
+            <tbody>
 
+              <?php 
+               $host = 'localhost';
+               $user = 'root';
+               $pass = '';
+               $db = 'jagoron';
+               $mysqli = new mysqli($host,$user,$pass,$db) or die($mysqli->error);
+
+               //query to get data from the table
+               $sql1 = "SELECT sno, Thana, Phone FROM Police_Station WHERE District='Dhaka' ";
+              
+                $result1 = mysqli_query($mysqli, $sql1);
+                  if ($result1->num_rows > 0): 
+                
+              ?>
+
+              <?php while($array=mysqli_fetch_row($result1)): ?>
+              <tr>
+                  <td><?php echo $array[0];?></td>
+                  <td><?php echo $array[1];?></td>
+                  <td><?php echo $array[2];?></td>
+              </tr>
+              <?php endwhile; ?>
+              <?php else: ?>
+
+              <tr>
+                 <td colspan="3" rowspan="1" headers="">No Data Found</td>
+              </tr>
+
+              <?php endif; ?>
+              <?php mysqli_free_result($result1); ?>
+            </tbody>
+          </table>
         </div>
 
       </div>
@@ -275,7 +316,48 @@
       <div class="row" style="margin-top: 30px;">
 
         <div class="col-lg-12 col-md-12 col-12" style="line-height: 30px">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">No</th>
+                <th scope="col">Thana</th>
+                <th scope="col">Phone</th>
+              </tr>
+            </thead>
+            <tbody>
 
+              <?php 
+               $host = 'localhost';
+               $user = 'root';
+               $pass = '';
+               $db = 'jagoron';
+               $mysqli = new mysqli($host,$user,$pass,$db) or die($mysqli->error);
+
+               //query to get data from the table
+               $sql1 = "SELECT sno, Thana, Phone FROM Police_Station WHERE District='Dhaka' ";
+              
+                $result1 = mysqli_query($mysqli, $sql1);
+                  if ($result1->num_rows > 0): 
+                
+              ?>
+
+              <?php while($array=mysqli_fetch_row($result1)): ?>
+              <tr>
+                  <td><?php echo $array[0];?></td>
+                  <td><?php echo $array[1];?></td>
+                  <td><?php echo $array[2];?></td>
+              </tr>
+              <?php endwhile; ?>
+              <?php else: ?>
+
+              <tr>
+                 <td colspan="3" rowspan="1" headers="">No Data Found</td>
+              </tr>
+
+              <?php endif; ?>
+              <?php mysqli_free_result($result1); ?>
+            </tbody>
+          </table>
         </div>
 
       </div>
@@ -292,7 +374,48 @@
       <div class="row" style="margin-top: 30px;">
 
         <div class="col-lg-12 col-md-12 col-12" style="line-height: 30px">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">No</th>
+                <th scope="col">Thana</th>
+                <th scope="col">Phone</th>
+              </tr>
+            </thead>
+            <tbody>
 
+              <?php 
+               $host = 'localhost';
+               $user = 'root';
+               $pass = '';
+               $db = 'jagoron';
+               $mysqli = new mysqli($host,$user,$pass,$db) or die($mysqli->error);
+
+               //query to get data from the table
+               $sql1 = "SELECT sno, Thana, Phone FROM Police_Station WHERE District='Dhaka' ";
+              
+                $result1 = mysqli_query($mysqli, $sql1);
+                  if ($result1->num_rows > 0): 
+                
+              ?>
+
+              <?php while($array=mysqli_fetch_row($result1)): ?>
+              <tr>
+                  <td><?php echo $array[0];?></td>
+                  <td><?php echo $array[1];?></td>
+                  <td><?php echo $array[2];?></td>
+              </tr>
+              <?php endwhile; ?>
+              <?php else: ?>
+
+              <tr>
+                 <td colspan="3" rowspan="1" headers="">No Data Found</td>
+              </tr>
+
+              <?php endif; ?>
+              <?php mysqli_free_result($result1); ?>
+            </tbody>
+          </table>
         </div>
 
       </div>
@@ -308,7 +431,48 @@
       <div class="row" style="margin-top: 30px;">
 
         <div class="col-lg-12 col-md-12 col-12" style="line-height: 30px">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">No</th>
+                <th scope="col">Thana</th>
+                <th scope="col">Phone</th>
+              </tr>
+            </thead>
+            <tbody>
 
+              <?php 
+               $host = 'localhost';
+               $user = 'root';
+               $pass = '';
+               $db = 'jagoron';
+               $mysqli = new mysqli($host,$user,$pass,$db) or die($mysqli->error);
+
+               //query to get data from the table
+               $sql1 = "SELECT sno, Thana, Phone FROM Police_Station WHERE District='Dhaka' ";
+              
+                $result1 = mysqli_query($mysqli, $sql1);
+                  if ($result1->num_rows > 0): 
+                
+              ?>
+
+              <?php while($array=mysqli_fetch_row($result1)): ?>
+              <tr>
+                  <td><?php echo $array[0];?></td>
+                  <td><?php echo $array[1];?></td>
+                  <td><?php echo $array[2];?></td>
+              </tr>
+              <?php endwhile; ?>
+              <?php else: ?>
+
+              <tr>
+                 <td colspan="3" rowspan="1" headers="">No Data Found</td>
+              </tr>
+
+              <?php endif; ?>
+              <?php mysqli_free_result($result1); ?>
+            </tbody>
+          </table>
         </div>
 
       </div>
@@ -325,7 +489,48 @@
       <div class="row" style="margin-top: 30px;">
 
         <div class="col-lg-12 col-md-12 col-12" style="line-height: 30px">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">No</th>
+                <th scope="col">Thana</th>
+                <th scope="col">Phone</th>
+              </tr>
+            </thead>
+            <tbody>
 
+              <?php 
+               $host = 'localhost';
+               $user = 'root';
+               $pass = '';
+               $db = 'jagoron';
+               $mysqli = new mysqli($host,$user,$pass,$db) or die($mysqli->error);
+
+               //query to get data from the table
+               $sql1 = "SELECT sno, Thana, Phone FROM Police_Station WHERE District='Dhaka' ";
+              
+                $result1 = mysqli_query($mysqli, $sql1);
+                  if ($result1->num_rows > 0): 
+                
+              ?>
+
+              <?php while($array=mysqli_fetch_row($result1)): ?>
+              <tr>
+                  <td><?php echo $array[0];?></td>
+                  <td><?php echo $array[1];?></td>
+                  <td><?php echo $array[2];?></td>
+              </tr>
+              <?php endwhile; ?>
+              <?php else: ?>
+
+              <tr>
+                 <td colspan="3" rowspan="1" headers="">No Data Found</td>
+              </tr>
+
+              <?php endif; ?>
+              <?php mysqli_free_result($result1); ?>
+            </tbody>
+          </table>
         </div>
 
       </div>
