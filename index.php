@@ -1,3 +1,40 @@
+<?php
+
+$hostName = "localhost";
+$userName = "root";
+$password = "";
+$databaseName = "jagoron";
+$conn = new mysqli($hostName, $userName, $password, $databaseName);
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+
+
+   $Division = '';
+	 $Location = '';
+	 $noOFReports = '';
+
+	// //query to get data from the table
+	 $sql = "SELECT * FROM `Harassment_Map` ";
+   $result = mysqli_query($conn, $sql);
+
+	//loop through the returned data
+	while ($row = mysqli_fetch_array($result)) {
+
+    $Division = $Division . '"'. $row['Division'].'",';
+		$Location = $Location . '"'. $row['Location'].'",';
+		$noOFReports = $noOFReports . '"'. $row['noOfReports'] .'",';
+        
+	}
+
+  $Division = trim($Division,",");
+	$Location = trim($Location,",");
+	$noOFReports = trim($noOFReports,",");
+
+  //$conn = mysqli_connect("localhost", "root", "", "jagoron");
+  ?>
+
 <!doctype html>
 <html>
 
@@ -397,14 +434,15 @@
 
                       function drawRegionsMap() {
                         var data = google.visualization.arrayToDataTable([
-                        ['Division','NoOFReports'],
-                         ['BD-A', 56],
-                         ['BD-B', 205],
-                         ['BD-C', 220],
-                         ['BD-D', 110],
-                         ['BD-E', 155],
-                         ['BD-F', 45],
-                         ['BD-G', 60],
+                        ['Division','Location','NoOFReports'],
+
+                            <?php
+                              $sqlmap = "SELECT * FROM `Harassment_Map`";
+                              $fire = mysqli_query($conn, $sqlmap);
+                              while($res = mysqli_fetch_assoc($fire)){
+                                    echo "[' " .$res['Division']." ', ' " .$res['Location']." ',".$res['noOfReports']."],";
+                              }
+                            ?>
                         ]);
                         
                         var options = {
@@ -424,45 +462,42 @@
 
             <div class="col-md-2 col-lg-2 col-12">
               <h3>Harassment reports we recevied last 3 months:</h3>
-            <table class="table">
-                <thead>
-                  <tr>
-                    <th scope="col">District</th>
-                    <th scope="col">NoOfReports</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
+              <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Location</th>
+                  <th scope="col">NoOfReports</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php 
+                  $host = 'localhost';
+	               $user = 'root';
+	               $pass = '';
+	               $db = 'jagoron';
+	               $mysqli = new mysqli($host,$user,$pass,$db) or die($mysqli->error);
 
-                    <td>Dhaka</td>
-                    <td>220</td>
-                  </tr>
-                  <tr>
-
-                    <td>Chittagong</td>
-                    <td>205</td>
-                  </tr>
-
-                  <tr>
-
-                    <td>Barisal</td>
-                    <td>56</td>
-                  </tr>
-
-                  <tr>
-
-                    <td>Rajshahi</td>
-                    <td>155</td>
-                    </tr>
-
-                    <tr>
-
-                    <td>Khulna </td>
-                    <td>110</td>
-                    </tr>
-
-                </tbody>
-              </table>
+	               //query to get data from the table
+	               $sqltable = "select * from Harassment_Map";
+                
+                  $resulttable = mysqli_query($mysqli, $sqltable);
+                    if ($resulttable->num_rows > 0): 
+                  
+                    ?>
+                <?php while($array=mysqli_fetch_row($resulttable)): ?>
+                <tr>
+                    <td><?php echo $array[2];?></td>
+                    <td><?php echo $array[3];?></td>
+                </tr>
+                <?php endwhile; ?>
+                <?php else: ?>
+                <tr>
+                   <td colspan="3" rowspan="1" headers="">No Data Found</td>
+                </tr>
+                <?php endif; ?>
+                <?php mysqli_free_result($resulttable); ?>
+              </tbody>
+            </table>
 
             </div>
 

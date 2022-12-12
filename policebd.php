@@ -277,14 +277,14 @@
                $mysqli = new mysqli($host,$user,$pass,$db) or die($mysqli->error);
 
                //query to get data from the table
-               $sql1 = "SELECT sno, Thana, Phone FROM Police_Station WHERE District='Dhaka' ";
+               $sql2 = "SELECT sno, Thana, Phone FROM Police_Station WHERE District='Borishal' ";
               
-                $result1 = mysqli_query($mysqli, $sql1);
-                  if ($result1->num_rows > 0): 
+                $result2 = mysqli_query($mysqli, $sql2);
+                  if ($result2->num_rows > 0): 
                 
               ?>
 
-              <?php while($array=mysqli_fetch_row($result1)): ?>
+              <?php while($array=mysqli_fetch_row($result2)): ?>
               <tr>
                   <td><?php echo $array[0];?></td>
                   <td><?php echo $array[1];?></td>
@@ -298,7 +298,7 @@
               </tr>
 
               <?php endif; ?>
-              <?php mysqli_free_result($result1); ?>
+              <?php mysqli_free_result($result2); ?>
             </tbody>
           </table>
         </div>
@@ -334,14 +334,14 @@
                $mysqli = new mysqli($host,$user,$pass,$db) or die($mysqli->error);
 
                //query to get data from the table
-               $sql1 = "SELECT sno, Thana, Phone FROM Police_Station WHERE District='Dhaka' ";
+               $sql3 = "SELECT sno, Thana, Phone FROM Police_Station WHERE District='Sylhet' ";
               
-                $result1 = mysqli_query($mysqli, $sql1);
-                  if ($result1->num_rows > 0): 
+                $result3 = mysqli_query($mysqli, $sql3);
+                  if ($result3->num_rows > 0): 
                 
               ?>
 
-              <?php while($array=mysqli_fetch_row($result1)): ?>
+              <?php while($array=mysqli_fetch_row($result3)): ?>
               <tr>
                   <td><?php echo $array[0];?></td>
                   <td><?php echo $array[1];?></td>
@@ -355,7 +355,7 @@
               </tr>
 
               <?php endif; ?>
-              <?php mysqli_free_result($result1); ?>
+              <?php mysqli_free_result($result3); ?>
             </tbody>
           </table>
         </div>
@@ -392,14 +392,14 @@
                $mysqli = new mysqli($host,$user,$pass,$db) or die($mysqli->error);
 
                //query to get data from the table
-               $sql1 = "SELECT sno, Thana, Phone FROM Police_Station WHERE District='Dhaka' ";
+               $sql4 = "SELECT sno, Thana, Phone FROM Police_Station WHERE District='Chittagong' ";
               
-                $result1 = mysqli_query($mysqli, $sql1);
-                  if ($result1->num_rows > 0): 
+                $result4 = mysqli_query($mysqli, $sql4);
+                  if ($result4->num_rows > 0): 
                 
               ?>
 
-              <?php while($array=mysqli_fetch_row($result1)): ?>
+              <?php while($array=mysqli_fetch_row($result4)): ?>
               <tr>
                   <td><?php echo $array[0];?></td>
                   <td><?php echo $array[1];?></td>
@@ -413,7 +413,7 @@
               </tr>
 
               <?php endif; ?>
-              <?php mysqli_free_result($result1); ?>
+              <?php mysqli_free_result($result4); ?>
             </tbody>
           </table>
         </div>
@@ -449,14 +449,14 @@
                $mysqli = new mysqli($host,$user,$pass,$db) or die($mysqli->error);
 
                //query to get data from the table
-               $sql1 = "SELECT sno, Thana, Phone FROM Police_Station WHERE District='Dhaka' ";
+               $sql4 = "SELECT sno, Thana, Phone FROM Police_Station WHERE District='Khulna' ";
               
-                $result1 = mysqli_query($mysqli, $sql1);
-                  if ($result1->num_rows > 0): 
+                $result4 = mysqli_query($mysqli, $sql4);
+                  if ($result4->num_rows > 0): 
                 
               ?>
 
-              <?php while($array=mysqli_fetch_row($result1)): ?>
+              <?php while($array=mysqli_fetch_row($result4)): ?>
               <tr>
                   <td><?php echo $array[0];?></td>
                   <td><?php echo $array[1];?></td>
@@ -470,7 +470,7 @@
               </tr>
 
               <?php endif; ?>
-              <?php mysqli_free_result($result1); ?>
+              <?php mysqli_free_result($result4); ?>
             </tbody>
           </table>
         </div>
@@ -507,14 +507,14 @@
                $mysqli = new mysqli($host,$user,$pass,$db) or die($mysqli->error);
 
                //query to get data from the table
-               $sql1 = "SELECT sno, Thana, Phone FROM Police_Station WHERE District='Dhaka' ";
+               $sql5 = "SELECT sno, Thana, Phone FROM Police_Station WHERE District='Rajshahi' ";
               
-                $result1 = mysqli_query($mysqli, $sql1);
-                  if ($result1->num_rows > 0): 
+                $result5 = mysqli_query($mysqli, $sql5);
+                  if ($result5->num_rows > 0): 
                 
               ?>
 
-              <?php while($array=mysqli_fetch_row($result1)): ?>
+              <?php while($array=mysqli_fetch_row($result5)): ?>
               <tr>
                   <td><?php echo $array[0];?></td>
                   <td><?php echo $array[1];?></td>
@@ -528,7 +528,7 @@
               </tr>
 
               <?php endif; ?>
-              <?php mysqli_free_result($result1); ?>
+              <?php mysqli_free_result($result5); ?>
             </tbody>
           </table>
         </div>

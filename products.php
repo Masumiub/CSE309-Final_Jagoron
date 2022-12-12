@@ -59,11 +59,21 @@ if ($conn->connect_error) {
         <h1 class="display-4" style="font-family: 'Poppins', 'Arial'; font-weight: 800; margin-top: 90px; margin-bottom: 50px">Self-Defense Products</h1>
       </div>
 
-        <div class="row">
-            <div class="col-lg-9 col-md-9 col-12">
+        <div class="row mt-4">
+            <!-- <div class="col-lg-9 col-md-9 col-12"> -->
 
-                  <div class="row" >
-                  <div class="col-md-6 col-lg-6 col-12">
+                  <!-- <div class="row" > -->
+                        <?php
+                          $qurey = "SELECT * FROM Product";
+                          $qurey_run = mysqli_query($conn, $qurey);
+
+                          $check_book = mysqli_num_rows($qurey_run) > 0;
+
+                          if($check_book){
+                              while($row = mysqli_fetch_array($qurey_run))
+                              {
+                                ?>
+                  <div class="col-md-4">
                       <div class="card mb-3" >
                           <div class="row g-0">
                             <div class="col-md-4">
@@ -71,9 +81,9 @@ if ($conn->connect_error) {
                             </div>
                             <div class="col-md-8">
                               <div class="card-body">
-                                <h5 class="card-title" id="proname">Pen Knife</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <p >Price: <span id="proprice">250</span> (in taka)</p>
+                                <h5 class="card-title" id="proname"><?php echo $row['ProductName']; ?></h5>
+                                <p class="card-text"> <?php echo $row['ProductDes']; ?> </p>
+                                <p >Price: <span id="proprice"> <?php echo $row['Price']; ?></span> (in taka)</p>
                                 
                                 <button class="btn btn-primary btn-sm"onclick="setOrder()">Select</button>
                               </div>
@@ -91,107 +101,43 @@ if ($conn->connect_error) {
                       document.getElementById("unitPrice").value = proprice;
                     }
                   </script>
-                  <div class="col-md-6 col-lg-6 col-12">
-                      <div class="card mb-3" >
-                          <div class="row g-0">
-                            <div class="col-md-4">
-                              <img src="product.png" class="img-fluid rounded-start" alt="...">
-                            </div>
-                            <div class="col-md-8">
-                              <div class="card-body">
-                                <h5 class="card-title">Pepper spray</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <p >Price: <span id="proprice">250</span> (in taka)</p>
-                                <button class="btn btn-primary btn-sm"onclick="setOrder()">Select</button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                  </div>
-              </div>
 
-            
-
-            <div class="row" >
-                  <div class="col-md-6 col-lg-6 col-12">
-                      <div class="card mb-3" >
-                          <div class="row g-0">
-                            <div class="col-md-4">
-                              <img src="product.png" class="img-fluid rounded-start" alt="...">
-                            </div>
-                            <div class="col-md-8">
-                              <div class="card-body">
-                                <h5 class="card-title">Stick</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <p >Price: <span id="proprice">250</span> (in taka)</p>
-                                <button class="btn btn-primary btn-sm"onclick="setOrder()">Select</button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                  </div>
+                    <?php
                   
-                  <div class="col-md-6 col-lg-6 col-12">
-                      <div class="card mb-3" >
-                          <div class="row g-0">
-                            <div class="col-md-4">
-                              <img src="product.png" class="img-fluid rounded-start" alt="...">
-                            </div>
-                            <div class="col-md-8">
-                              <div class="card-body">
-                                <h5 class="card-title">Lip Gun</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <p >Price: <span id="proprice">250</span> (in taka)</p>
-                                <button class="btn btn-primary btn-sm"onclick="setOrder()">Select</button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                  </div>
-              </div>
+                }
 
-              <div class="row">
-                    <div class="col-md-6 col-lg-6 col-12">
-                        <div class="card mb-3" >
-                            <div class="row g-0">
-                              <div class="col-md-4">
-                                <img src="product.png" class="img-fluid rounded-start" alt="...">
-                              </div>
-                              <div class="col-md-8">
-                                <div class="card-body">
-                                  <h5 class="card-title">Bat</h5>
-                                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                  <p >Price: <span id="proprice">250</span> (in taka)</p>
-                                  <button class="btn btn-primary btn-sm"onclick="setOrder()">Select</button>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                    </div>
-                    
-                    <div class="col-md-6 col-lg-6 col-12">
-                        <div class="card mb-3" >
-                            <div class="row g-0">
-                              <div class="col-md-4">
-                                <img src="product.png" class="img-fluid rounded-start" alt="...">
-                              </div>
-                              <div class="col-md-8">
-                                <div class="card-body">
-                                  <h5 class="card-title">Scale</h5>
-                                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                  <p >Price: <span id="proprice">250</span> (in taka)</p>
-                                  <button class="btn btn-primary btn-sm"onclick="setOrder()">Select</button>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                    </div>
-                </div>
+            }
+            else{
+              echo "No Book Found";
+            }
+        ?>
 
                 </div>
 
-            <div class="col-lg-3 col-md-3 col-12">
+            <div class="col-lg-3 col-md-3 col-12" style="margin-top: 40px;">
+            <?php
+                        $showAlert = false;
 
+                        if($_SERVER["REQUEST_METHOD"] == "POST"){
+
+                            $productName = $_POST["productName"];
+                            $unitPrice = $_POST["unitPrice"];
+                            $quantity = $_POST["quantity"];
+                            $address = $_POST["address"];
+                            $phone = $_POST["phone"];
+                            $exists = false;
+                            
+                                $sqlcourse ="INSERT INTO `Order_list` (`ProductName`, `Price`, `Quantity`, `Address` , `Phone`) VALUES ('$productName', '$unitPrice', '$quantity', '$address', '$phone')";
+
+                                 if ($conn->query($sqlcourse) === TRUE) {
+                                     echo  '<script>alert("New record created successfully")</script>';
+                                 
+                                } else {
+                                     echo "Error: " . $sqlcourse . "<br>" . $conn->error;
+                                 }
+
+                        }
+                      ?>
               <h1>Select A Product to Order</h1>
                 <form action="products.php" method="POST">
 
@@ -226,12 +172,6 @@ if ($conn->connect_error) {
             </div>
         </div>
 
-
-    
-
-
-      
-      </div>
 
 </main>
 

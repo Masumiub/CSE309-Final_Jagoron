@@ -70,7 +70,7 @@
                     <div class="card-body">
                     <h1 class="card-title">10</h1>
                     <h4>Courses</h4>
-                    <a href="Courses.html" class="btn btn-success btn-sm" role="button">View</a>
+                    <a href="Courses.php" class="btn btn-success btn-sm" role="button">View</a>
                     </div>
                 </div>
             </div>
@@ -80,7 +80,7 @@
                     <div class="card-body">
                     <h1 class="card-title">25</h1>
                     <h4>Products</h4>
-                    <a href="products.html" class="btn btn-success btn-sm" role="button">View</a>
+                    <a href="products.php" class="btn btn-success btn-sm" role="button">View</a>
                     </div>
                 </div>
             </div>
@@ -90,7 +90,7 @@
                     <div class="card-body">
                     <h1 class="card-title">30</h1>
                     <h4>PCR</h4>
-                    <a href="policebd.html" class="btn btn-success btn-sm" role="button">View</a>
+                    <a href="policebd.php" class="btn btn-success btn-sm" role="button">View</a>
                     </div>
                 </div>
             </div>
@@ -100,7 +100,7 @@
                     <div class="card-body">
                     <h1 class="card-title">10</h1>
                     <h4>Books</h4>
-                    <a href="Books.html" class="btn btn-success btn-sm" role="button">View</a>
+                    <a href="Books.php" class="btn btn-success btn-sm" role="button">View</a>
                     </div>
                 </div>
             </div>

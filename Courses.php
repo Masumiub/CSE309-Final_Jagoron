@@ -59,110 +59,44 @@ if ($conn->connect_error) {
     <div class="text-center mb-4 mt-4" >
              <h2 class="display-4" style="font-family: Product Sans, Arial ; margin-bottom: 60px;">Specialized Courses</h2>
              </div>
-        <div class="row" id="portfolio">
-        <div class="col-md-6 col-lg-6">
-              <div class="card mb-4 shadow-sm">
-                  <img src="Coursebanner1.jpg" height="300px" alt="Banner">
-                <div class="card-body">
-                  <p class="card-text">Women's Self Defense Tips - Self Defence for Women Safety | Udmey Course | Free</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <a button type="button" class="btn btn-success btn-sm" href="https://www.udemy.com/course/womens-self-defense-tips/">Enroll Now!</a>
-          
-                    </div>
-    
-                  </div>
-                </div>
-              </div>
-            </div>
-        <div class="col-md-6 col-lg-6">
-              <div class="card mb-4 shadow-sm">
-                  <img src="Coursebanner2.jpg" height="300px" alt="Banner">
-                <div class="card-body">
-                  <p class="card-text">Learn Wing Chun Sil Lim Tao At Home FREE! With David Wong | Udmey Course | Free</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <a button type="button" class="btn btn-success btn-sm" href="https://www.udemy.com/course/wing-chun-form-level-1-siu-lim-tao-free/">Enroll Now!</a>
-          
-                    </div>
-    
-                  </div>
-                </div>
-              </div>
-            </div>
-        </div>
-    
 
-        <div class="row" id="portfolio">
-            <div class="col-md-6 col-lg-6">
-                  <div class="card mb-4 shadow-sm">
-                      <img src="Coursebanner1.jpg" height="300px" alt="Banner">
-                    <div class="card-body">
-                      <p class="card-text">Women's Self Defense Tips - Self Defence for Women Safety | Udmey Course | Free</p>
-                      <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                          <a button type="button" class="btn btn-success btn-sm" href="https://www.udemy.com/course/womens-self-defense-tips/">Enroll Now!</a>
-              
-                        </div>
-        
+        <div class="row mt-4">
+
+        <?php
+            $qurey = "SELECT * FROM Course";
+            $qurey_run = mysqli_query($conn, $qurey);
+
+            $check_course = mysqli_num_rows($qurey_run) > 0;
+
+            if($check_course){
+                while($row = mysqli_fetch_array($qurey_run))
+                {
+                  ?>
+
+                 <div class="col-md-4">
+                    <div class="card">
+                      <div class="card-body">
+                         <img src="Coursebanner1.jpg" class="card-img-top img-fluid" height="300px" alt="Banner">
+                        <h2 class="card-title"> <?php echo $row['CourseName']; ?> </h2>
+                        <p class="card-text"> <?php echo $row['CourseDes']; ?> </p>
+                        <a class="btn btn-primary btn-sm" href="<?php echo $row['Link']; ?>">Enroll</a>  
                       </div>
                     </div>
-                  </div>
-                </div>
-            <div class="col-md-6 col-lg-6">
-                  <div class="card mb-4 shadow-sm">
-                      <img src="Coursebanner2.jpg" height="300px" alt="Banner">
-                    <div class="card-body">
-                      <p class="card-text">Learn Wing Chun Sil Lim Tao At Home FREE! With David Wong | Udmey Course | Free</p>
-                      <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                          <a button type="button" class="btn btn-success btn-sm" href="https://www.udemy.com/course/wing-chun-form-level-1-siu-lim-tao-free/">Enroll Now!</a>
-              
-                        </div>
-        
-                      </div>
-                    </div>
-                  </div>
-                </div>
-            </div>
-
-
-            <div class="row" id="portfolio">
-                <div class="col-md-6 col-lg-6">
-                      <div class="card mb-4 shadow-sm">
-                          <img src="Coursebanner1.jpg" height="300px" alt="Banner">
-                        <div class="card-body">
-                          <p class="card-text">Women's Self Defense Tips - Self Defence for Women Safety | Udmey Course | Free</p>
-                          <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                              <a button type="button" class="btn btn-success btn-sm" href="https://www.udemy.com/course/womens-self-defense-tips/">Enroll Now!</a>
+                  </div> 
                   
-                            </div>
-            
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                <div class="col-md-6 col-lg-6">
-                      <div class="card mb-4 shadow-sm">
-                          <img src="Coursebanner2.jpg" height="300px" alt="Banner">
-                        <div class="card-body">
-                          <p class="card-text">Learn Wing Chun Sil Lim Tao At Home FREE! With David Wong | Udmey Course | Free</p>
-                          <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                              <a button type="button" class="btn btn-success btn-sm" href="https://www.udemy.com/course/wing-chun-form-level-1-siu-lim-tao-free/">Enroll Now!</a>
+                  <?php
                   
-                            </div>
-            
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                </div>
+                }
 
-      
-      </div>
-
+            }
+            else{
+              echo "No course Found";
+            }
+        ?>
+    </div>
+    </div>
+    </div>
+        
 </main>
 
 <!-- ************************************* -->
